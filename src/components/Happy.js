@@ -8,6 +8,7 @@ function Happy(props) {
     return (
         <div>
             { props.happy ? <div>Very happy!</div> : <div>It must be Monday, eh?</div> }
+            <button onClick={() => props.setHappy(!props.happy)}>Change happy?</button>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { render } from 'react-dom'
 
 import Playground from './components/Playground';
@@ -25,24 +25,26 @@ import Happy from './components/Happy';
 */
 // We can pass (and typically do!) multiple 'props'
 function App(props) {
-  const { cohort, instructor, happy, week } = props;
+  const { cohort, instructor, week } = props;
+
+  const [happy, setHappy] = useState(false);
 
   // JSX
   return (
     <div className="container">
       <div className='container'>
         <h1>Welcome to React, Web {cohort}</h1>
-        <Happy happy={happy} />
+        <Happy happy={happy} setHappy={setHappy} />
         <div>It is week {week}</div>
         <input type="text" />
         <button>I'm a button!</button>
-        <Playground cohort={cohort} instructor={instructor} />
+        <Playground cohort={cohort} instructor={instructor} happy={happy}/>
       </div>
     </div>
   )
 }
 
 render(
-  <App cohort='46' instructor='Casey' happy={false} week={2} />,
+  <App cohort='46' instructor='Casey' week={2} />,
   document.querySelector('#root')
 )

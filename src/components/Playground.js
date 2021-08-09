@@ -30,6 +30,7 @@ function Playground(props) {
   return (
     <div>
       <h1>Welcome to Web{props.cohort}</h1>
+      <h4>{props.happy ? 'Happy!' : 'SAD'}</h4>
       <p>Your instructor, {props.instructor}, welcomes you!</p>
       <button onClick={() => setCount(count + 1)}>Add one</button>
       <button onClick={() => setCount(count - 1)}>Subtract one</button>
