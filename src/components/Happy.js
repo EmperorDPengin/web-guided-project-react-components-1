@@ -1,0 +1,14 @@
+// Step 1: import React
+import React from 'react';
+
+// Step 2: function definition
+// (can be either function declaration OR function expression)
+function Happy() {
+    //Step 3: return something...
+    return (
+        <div>I'M HAPPY</div>
+    )
+}
+
+// Step 4: export!
+export default Happy;

@@ -16,6 +16,8 @@ function Playground(props) {
   const [count, setCount] = useState(0);
   const [spinnerOn, setSpinnerOn] = useState(false);
 
+  // const { cohort, instructor } = props
+
   if (spinnerOn) {
     return (
       <div>

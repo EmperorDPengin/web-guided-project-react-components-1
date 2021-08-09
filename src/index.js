@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 
 import Playground from './components/Playground';
+import Happy from './components/Happy';
 
 /*
 💥💥💥 Rules when DECLARING a React component 💥💥💥
@@ -31,6 +32,7 @@ function App(props) {
     <div className="container">
       <div className='container'>
         <h1>Welcome to React, Web {cohort}</h1>
+        <Happy />
         { happy ? <div>Very happy!</div> : <div>It must be Monday, eh?</div> }
         <div>It is week {week}</div>
         <input type="text" />
