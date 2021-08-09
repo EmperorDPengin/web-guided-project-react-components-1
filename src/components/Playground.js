@@ -9,12 +9,17 @@
   - We use the dedicated "state updater" to schedule a state change: `setHealthPoints(healthPoints + 1)`
 */
 
-import React from 'react';
+import React, {useState} from 'react';
 
 // const Playground = (props) =>
 function Playground(props) {
+  const [count, setCount] = useState(56);
+  console.log(count);
+
   return (
-    <h1>I'm working! I'm working!</h1>
+    <div>
+      <h1>I'm working! I'm working!</h1>
+    </div>
   )
 }
 
