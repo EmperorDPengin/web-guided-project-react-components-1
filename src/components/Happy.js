@@ -3,10 +3,12 @@ import React from 'react';
 
 // Step 2: function definition
 // (can be either function declaration OR function expression)
-function Happy() {
+function Happy(props) {
     //Step 3: return something...
     return (
-        <div>I'M HAPPY</div>
+        <div>
+            { props.happy ? <div>Very happy!</div> : <div>It must be Monday, eh?</div> }
+        </div>
     )
 }
 

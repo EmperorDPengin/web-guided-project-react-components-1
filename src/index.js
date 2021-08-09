@@ -32,8 +32,7 @@ function App(props) {
     <div className="container">
       <div className='container'>
         <h1>Welcome to React, Web {cohort}</h1>
-        <Happy />
-        { happy ? <div>Very happy!</div> : <div>It must be Monday, eh?</div> }
+        <Happy happy={happy} />
         <div>It is week {week}</div>
         <input type="text" />
         <button>I'm a button!</button>
