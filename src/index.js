@@ -1,6 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 
+import Playground from './components/Playground';
+
 /*
 💥💥💥 Rules when DECLARING a React component 💥💥💥
   - Name is capitalized
@@ -35,6 +37,7 @@ function App(props) {
         <div>It is week {week}</div>
         <input type="text" />
         <button>I'm a button!</button>
+        <Playground />
       </div>
     </div>
   )
