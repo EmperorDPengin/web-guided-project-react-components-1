@@ -47,11 +47,3 @@ render(
   <App cohort='46' instructor='Casey' happy={false} week={2} />,
   document.querySelector('#root')
 )
-
-// thing ? true : false
-
-// if (thing) {
-
-// } else {
-
-// }

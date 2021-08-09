@@ -13,12 +13,24 @@ import React, {useState} from 'react';
 
 // const Playground = (props) =>
 function Playground(props) {
-  const [count, setCount] = useState(56);
-  console.log(count);
+  const [count, setCount] = useState(0);
+  const [spinnerOn, setSpinnerOn] = useState(false);
+
+  if (spinnerOn) {
+    return (
+      <div>
+        <p>Loading, please wait!</p>
+      </div>
+    )
+  }
 
   return (
     <div>
       <h1>I'm working! I'm working!</h1>
+      <button onClick={() => setCount(count + 1)}>Add one</button>
+      <button onClick={() => setCount(count - 1)}>Subtract one</button>
+      <button onClick={() => setSpinnerOn(!spinnerOn)}>Toggle spinner...</button>
+      <p>Count is: {count}</p>
     </div>
   )
 }
