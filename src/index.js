@@ -29,15 +29,13 @@ function App(props) {
   // JSX
   return (
     <div className="container">
-      <h1 id='mainHeading'>Welcome to React, web{cohort}</h1>
-      <p>{instructor} welcomes you!</p>
       <div className='container'>
         <h1>Welcome to React, Web {cohort}</h1>
         { happy ? <div>Very happy!</div> : <div>It must be Monday, eh?</div> }
         <div>It is week {week}</div>
         <input type="text" />
         <button>I'm a button!</button>
-        <Playground />
+        <Playground cohort={cohort} instructor={instructor} />
       </div>
     </div>
   )
