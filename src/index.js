@@ -1,6 +1,6 @@
-import React from 'react'
-import { render } from 'react-dom'
-
+import React from 'react';
+import { render } from 'react-dom';
+import Playground from './components/Playground';
 /*
 💥💥💥 Rules when DECLARING a React component 💥💥💥
   - Name is capitalized
@@ -21,15 +21,30 @@ import { render } from 'react-dom'
   - Don't forget all tags need to close correctly
 */
 
+// We can pass (and typically do!) multiple 'props'
 function App(props) {
+  const {cohort, instructor, happy, week} = props;
+  //JSX
   return (
+    // const div = document.createElement('div');
+    // div.classList.add('container');
     <div className='container'>
-      <h1>Welcome to React, Web {props.cohort}</h1>
+      <h1 id='mainHeading'>Welcome To React, web{cohort}</h1>
+      <p>{instructor} Welcomes You</p>
+      <div className='container'>
+        <h1>Welcome to React, Web {cohort}</h1>
+        { happy ? <div>Very Happy!</div> : <div> must be monday</div> }
+        <div> It is week {week}</div>
+        <input type='text'/>
+        <button>I am a button</button>
+        <Playground />
+      </div>
     </div>
   )
 }
 
 render(
-  <App cohort='37' />,
+  // App({cohort: 37})
+  <App cohort='37' instructor='Casey' happy={false} week={2}/>,
   document.querySelector('#root')
 )
